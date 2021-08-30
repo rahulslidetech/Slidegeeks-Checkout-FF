@@ -598,34 +598,34 @@ public class paypal_checkout extends SetupClass {
 	@Then("^user proceed to pay with paypal pp$")
 	public void user_proceed_to_pay_with_paypal_pp() throws Throwable {
 	
-		Thread.sleep(1400);
+		Thread.sleep(2000);
 		
 		    try
 		{
 			WebElement cp_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label")));
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		    cp_btn.click();
-		    Thread.sleep(3000);
+		    Thread.sleep(5000);
 		}
 		catch (NoSuchElementException popup) {
 			// TODO: handle exception
 		}
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		//Apply coupon
 
 		WebElement Coupon= driver.findElement(By.cssSelector("#discount-checkbox"));
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		Coupon.click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		 WebElement Add_Coupon= driver.findElement(By.cssSelector("#checkbox-input"));
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		Add_Coupon.sendKeys("5OFF");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		 WebElement Apply_Coupon= driver.findElement(By.cssSelector("#applyPromoCode"));
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		Apply_Coupon.click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		WebElement Value_after_coupon= driver.findElement(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div.checkout-box-wrapper.checkout-order > div > div > table > tbody > tr:nth-child(4) > td:nth-child(2) > strong > em"));
 		
